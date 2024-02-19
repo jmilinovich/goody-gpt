@@ -35,6 +35,12 @@ while True:
     PARAMS['page'] += 1
 
 # Exporting to a JSON file
+output_directory = 'json'
+
+# Ensure the output directory exists
+if not os.path.exists(output_directory):
+    os.makedirs(output_directory)
+
 with open('json/products_data.json', 'w') as file:
     json.dump(all_products, file)
 
