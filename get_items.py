@@ -42,6 +42,6 @@ if not os.path.exists(output_directory):
     os.makedirs(output_directory)
 
 with open('json/products_data.json', 'w') as file:
-    json.dump(all_products, file)
+    json.dump(all_products, file, indent=4)
 
 print(f'Total products fetched: {len(all_products)}')
